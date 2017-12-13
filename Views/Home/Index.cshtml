@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using CBT.Models
+<h1>C# Belt Test</h1>
+<hr>
+@if (ViewBag.Success != null){
+    <h3>Registration successful!</h3>
+}
+<div class="row">
+    <div class="col-xs-6">@Html.Partial("./Partials/Register")</div>
+    <div class="col-xs-6">@Html.Partial("./Partials/Login")</div>
+</div>

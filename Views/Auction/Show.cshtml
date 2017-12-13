@@ -1,0 +1,21 @@
+@model CBT.Models.Auction
+@using CBT.Models
+
+<div class="row">
+    <div class="col-md-8"><h1 style="display:inline-block;">@Model.Name</h1> <h4 style="margin-left:20px;display:inline-block;">Created by: @Model.Seller</h4></div>
+    <div style="margin-top:20px;text-align:right;" class="col-xs-4"><h4><a href="/logout">Logout</a></h4></div>
+</div>
+
+<h4>Time Remaining: @Model.Date.Subtract(DateTime.Now).Days.ToString() Days</h4>
+<h3>Description:</h3>
+<h4>@Model.Description</h4>
+
+<h4>Current Highest Bid: $@Model.Bid.ToString("0.00")</h4>
+<h4>By</h4>
+
+<form method="post" asp-controller="Auction" asp-action="Bid">
+<input type="text" name="amount" placeholder="Your bid goes here...">
+<input type="hidden" name="id" value="@Model.AuctionId">
+<input type="submit" value="Bid!!!">
+<h4>@ViewBag.Error</h4>
+</form>

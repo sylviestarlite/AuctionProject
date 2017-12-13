@@ -1,0 +1,40 @@
+@model CBT.Models.Dashboard
+@using CBT.Models;
+
+<div class="row">
+    <div class="col-md-8"><h1>Current Auctions</h1></div>
+    <div style="margin-top:20px;text-align:right;" class="col-xs-4"><h4>Hi @ViewBag.User.FirstName! <a href="/logout">Logout</a></h4></div>
+</div>
+
+<table class="table table-striped">
+    <tr>
+        <th>Product</th>
+        <th>Seller</th>
+        <th>Top Bid</th>
+        <th>Time Remaining</th>
+        <th></th>
+    </tr>
+    @foreach (Auction a in Model.Auctions)
+    {   
+        @if(a.Date.Subtract(DateTime.Now).Days >= 0)
+        {
+        <tr>
+            <td><a href="/auction/show/@a.AuctionId">@a.Name</a></td>
+            <td>@a.Seller</td>
+            <td>$@a.Bid.ToString("0.00")</td>
+            <td>@a.Date.Subtract(DateTime.Now).Days.ToString() Days</td>
+            @{
+                if(a.UserId == ViewBag.User.UserId)
+                    {<td><a href="/auction/delete/@a.AuctionId">Delete</a></td>}
+                else
+                    {<td></td>}
+            }
+        </tr>
+        }
+    }
+</table>
+
+<div class="row">
+    <div style="margin-top:15px;" class="col-md-8"><a href="/auction/create" class="btn btn-primary">New Auction</a></div>
+    <div style="margin-top:0;text-align:right;" class="col-xs-4"><h4>Your Current Wallet: $@ViewBag.User.Wallet.ToString("0.00")</h4></div>
+</div>

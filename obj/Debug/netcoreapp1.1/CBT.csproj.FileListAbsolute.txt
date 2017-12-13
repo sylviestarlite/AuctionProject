@@ -1,0 +1,8 @@
+C:\Users\Dane\Desktop\DojoAssignments\C#\CBT\bin\Debug\netcoreapp1.1\CBT.deps.json
+C:\Users\Dane\Desktop\DojoAssignments\C#\CBT\bin\Debug\netcoreapp1.1\CBT.runtimeconfig.json
+C:\Users\Dane\Desktop\DojoAssignments\C#\CBT\bin\Debug\netcoreapp1.1\CBT.runtimeconfig.dev.json
+C:\Users\Dane\Desktop\DojoAssignments\C#\CBT\bin\Debug\netcoreapp1.1\CBT.dll
+C:\Users\Dane\Desktop\DojoAssignments\C#\CBT\bin\Debug\netcoreapp1.1\CBT.pdb
+C:\Users\Dane\Desktop\DojoAssignments\C#\CBT\obj\Debug\netcoreapp1.1\CBT.AssemblyInfo.cs
+C:\Users\Dane\Desktop\DojoAssignments\C#\CBT\obj\Debug\netcoreapp1.1\CBT.dll
+C:\Users\Dane\Desktop\DojoAssignments\C#\CBT\obj\Debug\netcoreapp1.1\CBT.pdb
